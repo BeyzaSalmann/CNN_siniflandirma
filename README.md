@@ -41,7 +41,7 @@ Projenin çalışması için aşağıdaki Python kütüphanelerine ihtiyaç vard
 ## Geliştirilen Modeller ve Yöntemler
 
 ### 1. Model 1: Transfer Learning (VGG16) ile Referans Başarımı
-Projenin ilk aşamasında, elimizdeki veri setinin küçük olması (sınıf başına yaklaşık 50 görsel) nedeniyle, derin mimarileri sıfırdan eğitmek yerine literatürde başarısı kanıtlanmış **Transfer Öğrenme (Transfer Learning)** stratejisi benimsenmiştir. Bu bağlamda, ImageNet veri seti üzerinde milyonlarca görselle eğitilmiş olan **VGG16** mimarisi temel alınmıştır. Modelin öznitelik çıkarma (feature extraction) katmanları dondurularak, önceden öğrenilmiş kenar ve doku bilgileri korunmuş; çıkışına ise projeye özgü sınıflandırma katmanları eklenmiştir. Bu yaklaşım sayesinde, sınırlı veriye rağmen modelin ezberlemesi (overfitting) engellenmiş ve **%90** gibi yüksek bir doğruluk oranına ulaşılarak projenin referans başarımı belirlenmiştir.
+Projenin ilk aşamasında, elimizdeki veri setinin küçük olması (sınıf başına yaklaşık 50 görsel) nedeniyle, derin mimarileri sıfırdan eğitmek yerine literatürde başarısı kanıtlanmış **Transfer Öğrenme (Transfer Learning)** stratejisi benimsenmiştir. Bu bağlamda, ImageNet veri seti üzerinde milyonlarca görselle eğitilmiş olan **VGG16** mimarisi temel alınmıştır. Modelin öznitelik çıkarma (feature extraction) katmanları dondurularak, önceden öğrenilmiş kenar ve doku bilgileri korunmuş; çıkışına ise projeye özgü sınıflandırma katmanları eklenmiştir. Bu yaklaşım sayesinde, sınırlı veriye rağmen modelin ezberlemesi (overfitting) engellenmiş ve **%70** gibi bir doğruluk oranına ulaşılarak projenin referans başarımı belirlenmiştir.
 
 ### 2. Model 2: Temel CNN (Baseline) Tasarımı
 İkinci aşamada, hazır bir modelin gücünü kullanmadan, tamamen sıfırdan (from scratch) eğitilen özgün bir yapay sinir ağı mimarisinin performansı test edilmiştir. CIFAR-10 gibi klasik problemlerde kullanılan yapı referans alınarak; 3 ardışık evrişim bloğundan (Conv2D + MaxPooling) oluşan, filtre sayılarının 32'den 128'e kademeli olarak arttığı temel bir **CNN mimarisi** tasarlanmıştır. Bu aşamada modelin "saf" performansını gözlemlemek amacıyla herhangi bir veri artırma işlemi uygulanmamış, sadece veri normalizasyonu yapılmıştır. Beklendiği üzere, veri azlığı nedeniyle bu model **%55** bir başarı göstererek geliştirilmeye açık bir zemin oluşturmuştur.
@@ -55,11 +55,11 @@ Son aşamada, Model 2'nin performansını artırmak ve daha kararlı bir yapı e
 
 Üç modelin test seti üzerindeki nihai başarımları aşağıdaki gibidir:
 
-| Model | Yöntem | Veri Artırma | Test Başarısı (Accuracy) | Sonuç Yorumu |
-|-------|--------|--------------|--------------------------|--------------|
-| **Model 1** | Transfer Learning (VGG16) | Hayır | **%90** | En yüksek başarı (Hazır ağırlık avantajı). |
-| **Model 2** | Temel CNN (Custom) | Hayır | **%55** | Temel seviye başarı, geliştirilmeye açık. |
-| **Model 3** | Geliştirilmiş CNN | **Evet** | **%80** | Veri artırma ve mimari optimizasyon ile Model 2'ye göre artış sağlanmıştır. |
+| Model | Yöntem | Veri Artırma | Test Başarısı (Accuracy) | 
+|-------|--------|--------------|--------------------------|
+| **Model 1** | Transfer Learning (VGG16) | Hayır | **%70** | 
+| **Model 2** | Temel CNN (Custom) | Hayır | **%55** | 
+| **Model 3** | Geliştirilmiş CNN | **Evet** | **%80** | 
 
 
 
