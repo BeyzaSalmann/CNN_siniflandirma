@@ -16,7 +16,26 @@ Proje kapsamında özgün bir veri seti oluşturulmuş ve üç farklı model mim
     * Tüm görüntüler **128x128 piksel** boyutuna getirilmiştir.
     * Piksel değerleri 0-255 aralığından **0-1 aralığına normalize** edilmiştir.
     * Model 3 aşamasında **Veri Artırma (Data Augmentation)** teknikleri uygulanmıştır.
+## 🛠️ Kurulum ve Gereksinimler
 
+Bu proje **Google Colab** bulut tabanlı geliştirme ortamında hazırlanmıştır. Projeyi sorunsuz çalıştırmak için aşağıdaki adımları takip edebilirsiniz.
+
+###  Gerekli Kütüphaneler 
+Projenin çalışması için aşağıdaki Python kütüphanelerine ihtiyaç vardır (Google Colab'da bunlar varsayılan olarak yüklüdür):
+* `tensorflow` (Derin Öğrenme altyapısı)
+* `keras` (Model mimarisi için)
+* `numpy` (Matematiksel işlemler)
+* `pandas` (Veri analizi ve tablolar)
+* `matplotlib` (Grafik çizimi)
+* `opencv-python` (Görüntü işleme)
+
+### Çalıştırma Adımları
+
+**Seçenek 1: Google Colab **
+1.  Bu repodaki `.ipynb` uzantılı dosyaları ve `dataset` klasörünü (veya `veri_seti.zip` dosyasını) Google Drive'ınıza yükleyin.
+2.  Dosyaları Google Colab ile açın.
+3.  Dosyanın başındaki Google Drive bağlantı kodunu çalıştırın.
+4.  Sırasıyla tüm hücreleri çalıştırarak eğitimi başlatın.
 ---
 
 ## Geliştirilen Modeller ve Yöntemler
