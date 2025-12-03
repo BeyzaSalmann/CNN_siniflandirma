@@ -31,7 +31,7 @@ Projenin çalışması için aşağıdaki Python kütüphanelerine ihtiyaç vard
 
 ### Çalıştırma Adımları
 
-**Seçenek 1: Google Colab **
+** Google Colab **
 1.  Bu repodaki `.ipynb` uzantılı dosyaları ve `dataset` klasörünü (veya `veri_seti.zip` dosyasını) Google Drive'ınıza yükleyin.
 2.  Dosyaları Google Colab ile açın.
 3.  Dosyanın başındaki Google Drive bağlantı kodunu çalıştırın.
