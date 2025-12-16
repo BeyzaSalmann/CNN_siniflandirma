@@ -7,7 +7,7 @@ Proje kapsamında özgün bir veri seti oluşturulmuş ve üç farklı model mim
 
 ---
 
-## 📂 Veri Seti (Dataset)
+##  Veri Seti (Dataset)
 * **Toplama Yöntemi:** Veriler farklı açılardan mobil cihaz kamerası ile özgün olarak toplanmıştır.
 * **Sınıflar:**
     * `engel` (Skip )
@@ -17,7 +17,7 @@ Proje kapsamında özgün bir veri seti oluşturulmuş ve üç farklı model mim
     * Piksel değerleri 0-255 aralığından **0-1 aralığına normalize** edilmiştir.
     * Model 3 aşamasında **Veri Artırma (Data Augmentation)** teknikleri uygulanmıştır.
 
-## 🛠️ Kurulum ve Gereksinimler
+##  Kurulum ve Gereksinimler
 
 Bu proje **Google Colab** bulut tabanlı geliştirme ortamında hazırlanmıştır. Projeyi sorunsuz çalıştırmak için aşağıdaki adımları takip edebilirsiniz.
 
