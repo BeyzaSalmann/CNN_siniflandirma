@@ -7,7 +7,7 @@ Proje kapsamında özgün bir veri seti oluşturulmuş ve üç farklı model mim
 
 ---
 
-##Veri Seti (Dataset)
+## 📂 Veri Seti (Dataset)
 * **Toplama Yöntemi:** Veriler farklı açılardan mobil cihaz kamerası ile özgün olarak toplanmıştır.
 * **Sınıflar:**
     * `engel` (Skip )
@@ -17,11 +17,11 @@ Proje kapsamında özgün bir veri seti oluşturulmuş ve üç farklı model mim
     * Piksel değerleri 0-255 aralığından **0-1 aralığına normalize** edilmiştir.
     * Model 3 aşamasında **Veri Artırma (Data Augmentation)** teknikleri uygulanmıştır.
 
-##Kurulum ve Gereksinimler
+## 🛠️ Kurulum ve Gereksinimler
 
 Bu proje **Google Colab** bulut tabanlı geliştirme ortamında hazırlanmıştır. Projeyi sorunsuz çalıştırmak için aşağıdaki adımları takip edebilirsiniz.
 
-###Gerekli Kütüphaneler
+### Gerekli Kütüphaneler
 Projenin çalışması için aşağıdaki Python kütüphanelerine ihtiyaç vardır (Google Colab'da bunlar varsayılan olarak yüklüdür):
 * `tensorflow` (Derin Öğrenme altyapısı)
 * `keras` (Model mimarisi için)
@@ -32,7 +32,7 @@ Projenin çalışması için aşağıdaki Python kütüphanelerine ihtiyaç vard
 
 ### Çalıştırma Adımları
 
-**Google Colab**
+** Google Colab**
 1. Bu repodaki `.ipynb` uzantılı dosyaları ve `dataset` klasörünü (veya `veri_seti.zip` dosyasını) Google Drive'ınıza yükleyin.
 2. Dosyaları Google Colab ile açın.
 3. Dosyanın başındaki Google Drive bağlantı kodunu çalıştırın.
@@ -40,7 +40,7 @@ Projenin çalışması için aşağıdaki Python kütüphanelerine ihtiyaç vard
 
 ---
 
-##Geliştirilen Modeller ve Yöntemler
+## Geliştirilen Modeller ve Yöntemler
 
 ### 1. Model 1: Transfer Learning (VGG16) ile Referans Başarımı
 Projenin ilk aşamasında, elimizdeki veri setinin küçük olması (sınıf başına yaklaşık 50 görsel) nedeniyle, derin mimarileri sıfırdan eğitmek yerine literatürde başarısı kanıtlanmış **Transfer Öğrenme (Transfer Learning)** stratejisi benimsenmiştir. ImageNet ağırlıklarıyla eğitilmiş **VGG16** mimarisi kullanılarak, sınırlı veriye rağmen **%70** referans başarımı elde edilmiştir.
@@ -59,7 +59,7 @@ Bu adımlar sonucunda, Model 2'nin performansı ciddi oranda aşılarak **%80** 
 
 ---
 
-##Performans Karşılaştırması
+##  Performans Karşılaştırması
 
 Üç modelin test seti üzerindeki nihai başarımları aşağıdaki gibidir:
 
@@ -68,4 +68,3 @@ Bu adımlar sonucunda, Model 2'nin performansı ciddi oranda aşılarak **%80** 
 | **Model 1** | Transfer Learning (VGG16) | Hayır | **%70** |
 | **Model 2** | Temel CNN (Custom) | Hayır | **%55** |
 | **Model 3** | **Geliştirilmiş CNN (Optimize)** | **Evet** | **%80**  |
-
