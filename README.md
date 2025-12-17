@@ -5,6 +5,7 @@ Bu proje, **Bilgisayar Görmesi (Computer Vision)** ve **Derin Öğrenme (Deep L
 
 Proje kapsamında özgün bir veri seti oluşturulmuş ve üç farklı model mimarisi (Transfer Learning, Temel CNN, Geliştirilmiş CNN) tasarlanarak performansları karşılaştırılmıştır. Özellikle Model 3 aşamasında, temel modelin eksikleri analiz edilerek **5 aşamalı bir optimizasyon süreci** izlenmiştir.
 
+
 ---
 
 ##  Veri Seti (Dataset)
